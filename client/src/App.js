@@ -1,19 +1,16 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
-import Navbar from "./components/navbar";
-import RecordList from "./components/recordList";
-import Edit from "./components/edit";
-import Create from "./components/create";
+import Home from "./components/home";
+import Finished from "./components/finished"
 
 const App = () => {
   return (
     <div>
-      <Navbar />
       <Routes>
-        <Route exact path="/" element={<RecordList />} />
-        <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/create" element={<Create />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/finished" element={<Finished />}/>
       </Routes>
     </div>
   );
